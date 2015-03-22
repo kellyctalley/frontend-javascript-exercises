@@ -7,8 +7,12 @@ module.exports.equalStrings("fun", "fun");
 module.exports.equalStrings("bloc", "boring")
 
 module.exports.notEqual = function(one, two) {
-
+  var checkNotEqual = one !== two;
+  return checkNotEqual;
 };
+
+module.exports.notEqual(1, "1");
+module.exports.notEqual(1, 1);
 
 module.exports.inBetween = function(lower, middle, upper) {
 
