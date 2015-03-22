@@ -13,13 +13,17 @@ module.exports.sliceItAndCombineIt = function(bigString, startA, endA, startB, e
 module.exports.sliceItAndCombineIt("This is a long test of the emergency broadcast system.", 10, 20, 30, 40);
 
 module.exports.findFirstMatch = function(text, searchString) {
-
+  return text.indexOf(searchString);
 };
+
+module.exports.findFirstMatch("Roses are red.", "red");
 
 module.exports.findLastMatch = function(text, searchString) {
-
+  return text.lastIndexOf(searchString);
 };
 
-module.exports.substringBetweenMatches = function(text, searchString) {
+module.exports.findLastMatch("Roses are red.", "red");
 
+module.exports.substringBetweenMatches = function(text, searchString) {
+  
 };
