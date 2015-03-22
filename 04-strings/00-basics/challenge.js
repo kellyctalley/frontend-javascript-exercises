@@ -1,6 +1,8 @@
 module.exports.formLetter = function(firstName, senderName, message) {
-
+  return "Hello " + firstName + ",\n\n" + message + "\n\nSincerely,\n" + senderName;
 };
+
+module.exports.formLetter("Rob", "Joe", "Take care.")
 
 module.exports.sliceItAndCombineIt = function(bigString, startA, endA, startB, endB) {
 
