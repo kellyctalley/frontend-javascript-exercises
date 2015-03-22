@@ -25,5 +25,9 @@ module.exports.findLastMatch = function(text, searchString) {
 module.exports.findLastMatch("Roses are red.", "red");
 
 module.exports.substringBetweenMatches = function(text, searchString) {
-  
+  var search1 = text.indexOf(searchString);
+  var search2 = text.lastIndexOf(searchString);
+  return text.substring(search1 + searchString.length, search2);
 };
+
+module.exports.substringBetweenMatches("Roses are red, apples are really red.", "red");
