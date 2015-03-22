@@ -33,5 +33,12 @@ module.exports.outsideRanges(42);
 module.exports.outsideRanges(75);
 
 module.exports.nameAndPrice = function(name, price) {
-
+  var paperName = (name == "NYTimes") || (name == "LATimes");
+  var paperPrice = price >= 1;
+  var checkPaper = paperName && paperPrice;
+  return checkPaper;
 };
+
+module.exports.nameAndPrice("NYTimes", 1);
+module.exports.nameAndPrice("LATimes", 0);
+module.exports.nameAndPrice("NYTimes", 0);
