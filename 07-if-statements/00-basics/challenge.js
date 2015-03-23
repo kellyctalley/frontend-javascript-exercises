@@ -31,4 +31,20 @@ module.exports.checkLock(1, 2, 45, 1);
 module.exports.checkLock(5, 2, 45, 1);
 module.exports.checkLock(5, 1, 50, 1);
 
-module.exports.canIGet = undefined;
+//can i get function
+module.exports.canIGet = function(item, money){
+  if ((item == "MacBook Air") && (money >= 999)) {
+    return true; 
+  } else if ((item == "MacBook Pro") && (money >= 1299)) {
+    return true;
+  } else if ((item == "Mac Pro") && (money >= 2499)) {
+    return true;
+  } else if ((item == "Apple Sticker") && (money >= 1)) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+module.exports.canIGet("MacBook Air", 1000);
+module.exports.canIGet("Commodore 64", 100);
