@@ -11,4 +11,11 @@ module.exports.addItem = function(newItem, array) {
 module.exports.addItem('orange', ['banana', 'apple', 'orange']);
 module.exports.addItem('orange', ['banana', 'apple', 'blueberries']);
 
-module.exports.reverseSortedList = undefined;
+//reverse sorted list function
+module.exports.reverseSortedList = function(array) {
+    var sorted = array.sort();
+    return sorted.reverse();
+};
+
+module.exports.reverseSortedList([5, 1, 8, 4]);
+module.exports.reverseSortedList(['banana', 'apple', 'orange', 'pineapple']);
