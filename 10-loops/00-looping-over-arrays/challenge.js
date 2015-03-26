@@ -14,4 +14,11 @@ module.exports.splitAndLowerCaseString = function(inputString) {
     return newArray;
 };
 
-module.exports.addIndex = undefined;
+//add index function
+module.exports.addIndex = function (array) {
+    var newArray = []
+    for (var i = 0; i < array.length; i++) {
+        newArray.push(array.indexOf(array[i]) + " is " + array[i]);
+    }
+    return newArray
+};
