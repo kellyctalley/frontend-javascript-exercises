@@ -7,6 +7,11 @@ module.exports.sumNumbers = function (array) {
     return arrayTotal
 };
 
-module.exports.splitAndLowerCaseString = undefined;
+//split and lower case string function
+module.exports.splitAndLowerCaseString = function(inputString) {
+    var str = inputString.toLowerCase();
+    var newArray = str.split(",");
+    return newArray;
+};
 
 module.exports.addIndex = undefined;
