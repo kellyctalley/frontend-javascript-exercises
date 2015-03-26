@@ -30,4 +30,15 @@ module.exports.formLetter = function(myLetter) {
 
 module.exports.formLetter({recipient: "David", msg: "What up, thug?", sender: "Arnold"});
 
-module.exports.canIGet = undefined;
+//can i get function
+module.exports.canIGet = function (item, money) {
+    var priceList = {
+    'MacBook Air': 999,
+    'MacBook Pro': 1299,
+    'Mac Pro': 2499,
+    'Apple Sticker': 1
+    }
+    return priceList[item] <= money;
+};
+
+module.exports.canIGet("Apple Sticker", 2);
