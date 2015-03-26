@@ -23,6 +23,11 @@ module.exports.addProperty = function(object, newProp, newValue) {
 module.exports.addProperty({}, "firstName", "Jim");
 module.exports.addProperty({firstName: "Rob"}, "firstName", "Jim");
 
-module.exports.formLetter = undefined;
+//form letter function
+module.exports.formLetter = function(myLetter) {
+  return "Hello " + myLetter.recipient + ",\n\n" + myLetter.msg + "\n\nSincerely,\n" + myLetter.sender;
+};
+
+module.exports.formLetter({recipient: "David", msg: "What up, thug?", sender: "Arnold"});
 
 module.exports.canIGet = undefined;
