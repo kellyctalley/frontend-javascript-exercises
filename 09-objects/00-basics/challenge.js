@@ -10,7 +10,18 @@ module.exports.createCourse = function(title, duration, students) {
 
 module.exports.createCourse("Full Stack Engineering", "4 weeks", ["Rob", "Tim", "Joe"]);
 
-module.exports.addProperty = undefined;
+//add property function
+module.exports.addProperty = function(object, newProp, newValue) {
+    if (object.hasOwnProperty(newProp)) {
+        return object;
+    } else {
+    object[newProp] = newValue;
+    return object;
+    }
+};
+
+module.exports.addProperty({}, "firstName", "Jim");
+module.exports.addProperty({firstName: "Rob"}, "firstName", "Jim");
 
 module.exports.formLetter = undefined;
 
