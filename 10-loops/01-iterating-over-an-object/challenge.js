@@ -16,4 +16,11 @@ module.exports.getValues = function(object) {
     return myArray;
 };
 
-module.exports.objectToArray = undefined;
+//object to array function
+module.exports.objectToArray = function(object) {
+    var myArray = [];
+    for (var property in object) {
+        myArray.push(property + " is " + object[property]);
+    }
+    return myArray;
+};
