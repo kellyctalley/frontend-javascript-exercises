@@ -15,4 +15,23 @@ module.exports.extend = function (dest, src) {
     return dest
 };
 
-module.exports.hasElems = undefined;
+//has elements function (finally!)
+module.exports.hasElems = function (object, array) {
+    var objectArray = Object.getOwnPropertyNames(object).sort();
+    var sortArray = array.sort();
+    if (sortArray.length === 0) {
+        return true
+    } else {
+        if (objectArray.length !== sortArray.length) {
+            return false;
+        } else {
+            for (var i = 0; i < objectArray.length; i++) {
+                if (objectArray[i] !== sortArray[i]) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        }
+    }
+};
