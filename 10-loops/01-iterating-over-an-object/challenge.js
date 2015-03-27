@@ -1,5 +1,26 @@
-module.exports.getKeys = undefined;
+//get keys function
+module.exports.getKeys = function(object) {
+    var myArray = [];
+    for (var property in object) {
+        myArray.push(property);
+    }
+    return myArray;
+};
 
-module.exports.getValues = undefined;
+//get values function
+module.exports.getValues = function(object) {
+    var myArray = [];
+    for (var property in object) {
+        myArray.push(object[property]);
+    }
+    return myArray;
+};
 
-module.exports.objectToArray = undefined;
+//object to array function
+module.exports.objectToArray = function(object) {
+    var myArray = [];
+    for (var property in object) {
+        myArray.push(property + " is " + object[property]);
+    }
+    return myArray;
+};
