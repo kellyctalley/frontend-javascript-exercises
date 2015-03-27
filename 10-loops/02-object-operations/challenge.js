@@ -7,6 +7,12 @@ module.exports.copy = function (object) {
     return secondObject
 };
 
-module.exports.extend = undefined;
+//extend object function
+module.exports.extend = function (dest, src) {
+    for (var property in src) {
+        dest[property] = src[property];
+    }
+    return dest
+};
 
 module.exports.hasElems = undefined;
