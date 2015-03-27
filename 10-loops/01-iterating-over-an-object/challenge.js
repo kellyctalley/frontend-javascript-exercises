@@ -7,6 +7,13 @@ module.exports.getKeys = function(object) {
     return myArray;
 };
 
-module.exports.getValues = undefined;
+//get values function
+module.exports.getValues = function(object) {
+    var myArray = [];
+    for (var property in object) {
+        myArray.push(object[property]);
+    }
+    return myArray;
+};
 
 module.exports.objectToArray = undefined;
